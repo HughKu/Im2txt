@@ -8,7 +8,7 @@ This repo aims to provide a **Ready-to-Go** setup with TensorFlow environment fo
     * [Architecture](#architecture)
 * [Requirement](#getting-started)
     * [Install](#install-required-packages)
-    * [Get Model][#get-pre-trained-model]
+    * [Get Pre-trained Model](#get-pre-trained-model)
 * [Generating Captions](#generating-captions)
 * [Issue](#encoutering-issue)
 
