@@ -44,14 +44,13 @@ tf.logging.set_verbosity(tf.logging.INFO)
 
 
 
-def RenameCkpt():
-    # 1.0.1 : 1.2.1
+def rename_model_ckpt():
 
-    BASE_DIR = '/Users/wlku/Documents/Developing/TensorFlow/models/research/im2txt_working'
+    BASE_DIR = '/Users/wlku/Documents/Developing/TensorFlow/Im2txt/'
     
     vars_to_rename = {
-    "lstm/basic_lstm_cell/weights": "lstm/basic_lstm_cell/kernel",
-    "lstm/basic_lstm_cell/biases": "lstm/basic_lstm_cell/bias",
+    "lstm/BasicLSTMCell/Linear/Matrix": "lstm/basic_lstm_cell/kernel",
+    "lstm/BasicLSTMCell/Linear/Bias": "lstm/basic_lstm_cell/bias",
     }
     
     new_checkpoint_vars = {}
@@ -62,6 +61,8 @@ def RenameCkpt():
         new_name = vars_to_rename[old_name]
       else:
         new_name = old_name
+
+      print(old_name)
       new_checkpoint_vars[new_name] = tf.Variable(reader.get_tensor(old_name))
 
     init = tf.global_variables_initializer()
@@ -77,7 +78,7 @@ def RenameCkpt():
 def main(_):
 
   # Change tensor name
-  #RenameCkpt()
+  #rename_model_ckpt()
 
   # Build the inference graph.
   g = tf.Graph()
