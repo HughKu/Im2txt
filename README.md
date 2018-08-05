@@ -51,7 +51,7 @@ OR you could opt for manually installing the required packages below:
     * Then install the NLTK data package "punkt" ([instructions](http://www.nltk.org/data.html))
 
 ### Get Pre-trained Model
-Download [inceptionv3 finetuned parameters over 1M](https://drive.google.com/open?id=1xl0QqAtQY_dyiGF6yIz2lNQn1pMfgdDM) and you will get 4 files, and make sure to put them all into this path `im2txt/model/Hugh/train/`
+Download [inceptionv3 finetuned parameters over 1M](https://drive.google.com/open?id=1r4-9FEIbOUyBSvA-fFVFgvhFpgee6sF5) and you will get 4 files, and make sure to put them all into this path `im2txt/model/Hugh/train/`
 * **newmodel.ckpt-2000000.data-00000-of-00001**
 * **newmodel.ckpt-2000000.index**
 * **newmodel.ckpt-2000000.meta**
@@ -68,9 +68,9 @@ python im2txt/run_inference.py --checkpoint_path="im2txt/model/Hugh/train/newmod
 Example output:
 ```
 Captions for image test.jpg:
-  0) a young boy wearing a hat and a tie . <S> <S> . <S> <S> . <S> <S> (p=0.000014)
-  1) a young boy wearing a tie and a hat . <S> <S> . <S> <S> . <S> <S> (p=0.000012)
-  2) a young boy wearing a tie and a hat . <S> <S> <S> . <S> <S> . <S> (p=0.000008)
+  0) a young boy wearing a hat and tie . (p=0.000195)
+  1) a young boy wearing a blue shirt and tie . (p=0.000100)
+  2) a young boy wearing a blue shirt and a tie . (p=0.000045)
 ```
 
 Note: you may get different results. Some variation between different models is
